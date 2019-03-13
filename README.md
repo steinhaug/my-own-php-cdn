@@ -10,12 +10,24 @@ I'ts gratis!
 
 I am not inventing the wheel here, it's already been done and probably with extremely well crafted sollutions aswell. Also the existing CDN's are real CDN's with several servers distributed so that infact they are a CDN by the definition... I will not be, I will be solving the quest for Google PageSpeed 100 ranking and therefore a CDN is needed in all and every website. Since I for some reason want to do it myself so I can proudly state when drinking my beer - I made that! ( and since I didnt want to pay for a service I assume I can so easily make myself, ignoring the fact that I will be using same server and subdomain which is surely a corrupted and perverted view of a CDN, anyway... ). So lets do this, lets make the greatest CDN we can possible make applying best practices for optimal performance. 
 
+## Delivery logic
+
+Flowchart diagram available in different formats:
+[draw.io file](https://drive.google.com/file/d/1PNXdQvsSUDCecRG1wNiAMnUm6pyXUhT8/view?usp=sharing)
+,
+[PNG](/steinhaug/my-own-php-cdn/blob/master/reference/My-Own-PHP-CDN.v1.0.png?raw=true)
+,
+[SVG](https://raw.githubusercontent.com/steinhaug/my-own-php-cdn/master/reference/My-Own-PHP-CDN.v1.0.svg)
+.
+
+![Delivery logic v1.0](https://raw.githubusercontent.com/steinhaug/my-own-php-cdn/master/reference/My-Own-PHP-CDN.v1.0.png "Delivery logic v1.0")
+
 ## Requirements and setup
 
 my-own-php-cdn is built on PHP 7 and requires no extra PHP modules, it requires apache and .htaccess with common modules enabled as headers and rewrite. I assume no special attention is needed when setting it up.
 
 
-## Configuring the main website
+## Setup for the main website
 
 Your main domain that needs the CDN needs to reqrite their URLS for their assets. All static files, images, js files, css files etc should be rewritten like this:
 
@@ -31,21 +43,9 @@ Optimized: <a href="//cdn.mysite.com/mobile/images/steinhaug.jpg">//cdn.mysite.c
 
 For the optimized url the devicetype would be either: mobile, tablet or desktop.
 
-## Configuring My Own PHP CDN
+## Setup for the CDN site, My Own PHP CDN
 
 To be continued...
-
-## Delivery logic
-
-Flowchart diagram available in different formats:
-[draw.io file](https://drive.google.com/file/d/1PNXdQvsSUDCecRG1wNiAMnUm6pyXUhT8/view?usp=sharing)
-,
-[PNG](/steinhaug/my-own-php-cdn/blob/master/reference/My-Own-PHP-CDN.v1.0.png?raw=true)
-,
-[SVG](https://raw.githubusercontent.com/steinhaug/my-own-php-cdn/master/reference/My-Own-PHP-CDN.v1.0.svg)
-.
-
-![Delivery logic v1.0](/steinhaug/my-own-php-cdn/blob/master/reference/My-Own-PHP-CDN.v1.0.png?raw=true "Delivery logic v1.0")
 
 ## Want to help me out or add your take on the CDN
 
