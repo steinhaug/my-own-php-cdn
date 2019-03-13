@@ -49,9 +49,9 @@ To be continued...
 
 ## Want to help me out or add your take on the CDN
 
-Follow the discussion at stackoverflow if you have any views, information or other related data you think I should be aware of.
+Follow the discussion at stackexchange if you have any views, information or other related data you think I should be aware of.
 
-__link to stackoverflow question here__
+[softwareengineering.stackexchange.com question](https://softwareengineering.stackexchange.com/questions/388507/creating-the-perfect-self-populating-cdn-serving-static-optimized-content-from)
 
 ## Authors
 - [Kim Steinhaug](https://github.com/steinhaug) ([@steinhaug](https://twitter.com/steinhaug))
