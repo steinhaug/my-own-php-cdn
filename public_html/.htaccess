@@ -1,0 +1,26 @@
+RewriteEngine On
+
+# If asset already exists let Apache do what it knows best serve the file
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.+) - [PT,L]
+
+# Redirect with params starting with &
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^/wp-content/(.*) [NC]
+RewriteCond %{QUERY_STRING} ^[^\&]             
+RewriteRule ([a-zA-Z0-9-_\.\/]*) /myownphpcdn.php?url=/$1&%{QUERY_STRING} [L]
+
+# Redirect with params
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^/wp-content/(.*) [NC]
+RewriteCond %{QUERY_STRING} ^\&
+RewriteRule ([a-zA-Z0-9-_\.\/]*) /myownphpcdn.php?url=/$1%{QUERY_STRING} [L]
+
+# Redirect URL only
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^/wp-content/(.*) [NC]
+RewriteRule ([a-zA-Z0-9-_\.\/]*) /myownphpcdn.php?url=/$1 [L]
